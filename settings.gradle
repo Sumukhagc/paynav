@@ -1,0 +1,2 @@
+rootProject.name='PayNav'
+include ':app'

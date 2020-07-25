@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paynav">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".notification"></activity>
+        <activity android:name=".Scan" />
+        <activity android:name=".request" />
+        <activity android:name=".dues" />
+        <activity android:name=".profile" />
+        <activity android:name=".plus" />
+        <activity android:name=".rl4" />
+        <activity android:name=".rl3" />
+        <activity android:name=".rl2" />
+        <activity android:name=".rl1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

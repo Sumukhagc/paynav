@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="PayNav"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/scanner"
+            android:layout_width="25dp"
+            android:src="@drawable/scan"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+           />
+
+        <ImageView
+            android:id="@+id/notifications"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_notifications_none_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="27dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/reddot" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Card"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="41dp"
+            android:layout_marginBottom="-76dp"
+            android:text="Hello, Vivek!"
+
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="42dp"
+            android:layout_alignParentLeft="true" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Card"
+            android:layout_width="285dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:background="@android:color/white"
+            android:elevation="10dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="285dp"
+                android:layout_height="150dp"
+
+                android:layout_marginBottom="8dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_below="@+id/Card"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_height="10dp"
+            android:layout_width="180dp">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="260dp"
+            android:background="@drawable/white_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PayBack"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:elevation="10dp"
+                android:background="@drawable/white_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/green"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/green"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/harshada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harshada Nikam"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/green"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/green"
+                    android:layout_below="@+id/harshada"
+                    android:layout_marginStart="5dp"
+                    android:text="Due Date: 12-July-2020"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/green" />
+
+                <TextView
+                    android:id="@+id/pay_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:text="Pay"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="17sp"
+                    android:layout_below="@+id/pay_green"
+                    android:text="4200"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl1"
+                android:orientation="horizontal"
+                android:elevation="10dp"
+                android:background="@drawable/white_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/pink_box"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/pink"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/hearty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hearty the Hero"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/pink_box"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/pink_box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/pink_box"
+                    android:layout_below="@+id/hearty"
+                    android:layout_marginStart="5dp"
+                    android:text="Due Date: 12-July-2020"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:layout_toRightOf="@+id/pink_box"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/pay_pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:text="Pay"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="22sp"
+                    android:layout_below="@+id/pay_pink"
+                    android:text="200"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    android:layout_marginRight="22sp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="185dp"
+                android:layout_marginEnd="20dp"
+                android:text="View all  >"
+                android:id="@+id/viewall"
+                android:textSize="13sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl2"
+                android:orientation="horizontal"
+                android:elevation="10dp"
+                android:background="@drawable/white_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp">
+
+                <ImageView
+                    android:id="@+id/yellow_box"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/coin"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/yellow"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/make_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make your first transaction"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/yellow_box"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/yellow_box"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/yellow_box"
+                    android:layout_below="@+id/make_transaction"
+                    android:layout_marginStart="5dp"
+                    android:text="We are here to take care of the rest"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/yellow_box" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl3"
+                android:orientation="horizontal"
+                android:elevation="10dp"
+                android:background="@drawable/white_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/purple_box"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    app:srcCompat="@drawable/billsplit"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/purple"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/split_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Split the bill responsibly"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/purple_box"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/purple_box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/purple_box"
+                    android:layout_below="@+id/split_bill"
+                    android:layout_marginStart="5dp"
+                    android:text="Don't worry! We'll do the math for you"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/purple_box" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/plus"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="9dp"
+                app:srcCompat="@drawable/baseline"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:focusable="true"
+                app:backgroundTint="@android:color/white"
+                app:elevation="15dp"
+                app:fabSize="normal"
+                app:fabCustomSize="55dp"
+                app:pressedTranslationZ="25dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+
+                <ImageButton
+                    android:id="@+id/home"
+                    android:background="@drawable/white_background"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/outlinehome"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:layout_below="@+id/home"
+                    android:layout_alignStart="@+id/home"
+                    android:textAllCaps="false"
+                    android:textColor="#6699CC"
+                    android:layout_marginStart="7dp"
+                    android:textSize="10sp"
+                    android:layout_alignLeft="@+id/home"
+                    android:layout_marginLeft="7dp" />
+
+                <ImageButton
+                    android:id="@+id/dues"
+                    android:background="@android:color/white"
+                    android:layout_toEndOf="@+id/home"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="30dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/calender"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dues"
+                    android:layout_below="@+id/dues"
+                    android:layout_alignStart="@+id/dues"
+                    android:layout_marginTop="2.5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#6699CC"
+                    android:layout_marginStart="6dp"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignLeft="@+id/dues" />
+
+                <ImageButton
+                    android:id="@+id/requests"
+                    android:background="@android:color/white"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/profile"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/question"
+                    android:layout_toLeftOf="@+id/profile"
+                    android:layout_marginRight="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Requests"
+                    android:layout_below="@+id/requests"
+                    android:layout_alignStart="@+id/requests"
+                    android:textAllCaps="false"
+                    android:textColor="#6699CC"
+                    android:layout_marginTop="-1.5dp"
+                    android:textSize="10sp"
+                    android:layout_alignLeft="@+id/requests" />
+
+                <ImageButton
+                    android:id="@+id/profile"
+                    android:background="@drawable/white_background"
+                    android:layout_width="40dp"
+
+                    android:layout_marginEnd="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitCenter"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/outline"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/profile"
+                    android:layout_alignStart="@+id/profile"
+                    android:textAllCaps="false"
+                    android:textColor="#6699CC"
+                    android:layout_marginTop="-1.5dp"
+                    android:layout_marginStart="6dp"
+
+                    android:layout_alignLeft="@+id/profile"
+
+                    android:layout_marginLeft="6dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contain_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"/>
+
+</RelativeLayout>
+
