@@ -112,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="260dp"
+            android:id="@+id/bigrelativelayout"
             android:background="@drawable/white_background">
 
             <TextView

@@ -9,15 +9,13 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".notification"></activity>
+        <activity android:name=".SplitBill"></activity>
+        <activity android:name=".notification" />
         <activity android:name=".Scan" />
         <activity android:name=".request" />
         <activity android:name=".dues" />
         <activity android:name=".profile" />
         <activity android:name=".plus" />
-        <activity android:name=".rl4" />
-        <activity android:name=".rl3" />
-        <activity android:name=".rl2" />
         <activity android:name=".rl1" />
         <activity android:name=".MainActivity">
             <intent-filter>

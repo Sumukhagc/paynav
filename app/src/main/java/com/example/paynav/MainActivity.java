@@ -1,6 +1,7 @@
 package com.example.paynav;
 
 
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.paynav.fragment.DueFragment;
+import com.example.paynav.fragment.NotificationFragment;
+import com.example.paynav.fragment.PaymentFragment;
+import com.example.paynav.fragment.PlusFragment;
+import com.example.paynav.fragment.ProfileFragment;
+import com.example.paynav.fragment.RequestFragment;
+import com.example.paynav.fragment.ScannerFragment;
+import com.example.paynav.fragment.SplitFragment;
+import com.example.paynav.fragment.TransactionFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Timer;
@@ -96,25 +108,55 @@ for(int j=0;j<dot_count;j++)
         rl1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(MainActivity.this,rl1.class) );
+                PaymentFragment paymentFragment = new PaymentFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                Bundle b = new Bundle();
+                paymentFragment.setArguments(b);
+                fragmentTransaction.replace(R.id.contain_layout, paymentFragment);
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         } );
         rl2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(MainActivity.this,rl2.class) );
+                PaymentFragment paymentFragment = new PaymentFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                Bundle b = new Bundle();
+                b.putString("details", "Amount of 4200 is to be paid to Harshada Nikam");
+                paymentFragment.setArguments(b);
+                fragmentTransaction.replace(R.id.contain_layout, paymentFragment);
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         } );
         rl3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(MainActivity.this,rl3.class) );
+                TransactionFragment makeTransactionFragment = new TransactionFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.contain_layout, makeTransactionFragment);
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+
             }
         } );
         rl4.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(MainActivity.this,rl4.class) );
+                SplitFragment splitBillFragment = new SplitFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.contain_layout, splitBillFragment);
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         } );
         plus.setOnClickListener( new View.OnClickListener() {
@@ -132,34 +174,85 @@ profile.setOnClickListener( new View.OnClickListener() {
 dues.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        startActivity( new Intent(MainActivity.this,dues.class) );
+        DueFragment dueFragment = new DueFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, dueFragment);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 } );
 requests.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        startActivity( new Intent(MainActivity.this,request.class) );
+        RequestFragment requestFragment = new RequestFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, requestFragment);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 } );
 home.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Toast.makeText( MainActivity.this,"You are already in main ativity!!! " ,Toast.LENGTH_SHORT).show();
+        Toast.makeText( MainActivity.this,"You are already in main activity!!! " ,Toast.LENGTH_SHORT).show();
     }
 } );
 scanner.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-       startActivity( new Intent( MainActivity.this,Scan.class ) );
+        ScannerFragment scannerFragment = new ScannerFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, scannerFragment);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 } );
 notification.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        startActivity( new Intent( MainActivity.this, notification.class ) );
+       NotificationFragment n = new NotificationFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, n);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 } );
+plus.setOnClickListener( new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        PlusFragment plusFragment = new PlusFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, plusFragment);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
+} );
+profile.setOnClickListener( new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        ProfileFragment profileFragment = new ProfileFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contain_layout, profileFragment);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+} );
+
+
+    }
+
 
     private void setAllIds() {
         rl1= findViewById( R.id.rl1 );
